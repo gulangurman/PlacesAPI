@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "23c23d5a-3694-4a43-9925-622231cd23de",
+		"name": "Places API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add new place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Buddha Bar\",\r\n  \"tags\":\"Entertainment\",\r\n  \"isOpen\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/Places",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new place",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\":\"Lakeside Park\",\r\n  \"tags\":\"\",\r\n  \"isOpen\":true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/Places",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all places",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/Places",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get place",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api_url}}/Places/2",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update place",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":2,\r\n    \"name\":\"Lakeside Nature Park\",\r\n    \"tags\":\"Nature,Sports\",\r\n    \"isOpen\":true  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/Places/2",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete place",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api_url}}/Places/2",
+					"host": [
+						"{{api_url}}"
+					],
+					"path": [
+						"Places",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_url",
+			"value": "http://localhost:5000/api"
+		}
+	]
+}
